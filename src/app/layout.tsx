@@ -1,32 +1,37 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto } from "next/font/google";
+import { Inter, Lato } from "next/font/google";
 import "./globals.css";
+import Background from "@/components/background";
+import NavBar from "@/components/navBar";
 
-const roboto = Roboto({
-  variable: "--font-roboto",
+const inter = Inter({
+  variable: "--font-primary",
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lato = Lato({
+  variable: "--font-secondary",
   subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
-  title: "Sokun Deny",
+  title: "SOKUN DENY",
   description: "Sokun Deny's Portfolio",
+  icons:{
+    icon:"icon.jpg"
+  }
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body
-        className={`antialiased`}
-      >
+    <html lang="en" className={`${inter.variable} ${lato.variable}`}>
+      <body className="antialiased">
+        <Background/>
+        <NavBar/>
         {children}
       </body>
     </html>
