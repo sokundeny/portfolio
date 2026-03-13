@@ -46,7 +46,7 @@ const TechStack = () => {
 
 
   return (
-    <section className="w-full py-32 flex flex-col gap-24">
+    <section className="w-full my-63 flex flex-col gap-24">
 
       {/* Title */}
       <h2 className="text-6xl font-medium text-text-secondary ">
@@ -69,7 +69,7 @@ const TechStack = () => {
               bg-neutral-800
               text-text-secondary
               hover:text-primary
-              hover:scale-105
+              hover:-translate-y-1.5
               hover:bg-neutral-700
               transition-all duration-300
               shadow-md

@@ -2,6 +2,7 @@ import Image from "next/image";
 import LadingPage from "./_components/landingPage";
 import AboutMe from "./_components/aboutMe";
 import TechStack from "./_components/techStack";
+import Work from "./_components/work";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         <LadingPage/>
         <AboutMe/>
         <TechStack/>
+        <Work/>
       </div>
     </div>
   );
