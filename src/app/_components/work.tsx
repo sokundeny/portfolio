@@ -1,27 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Image from "next/image";
 import { Github , ExternalLink } from "lucide-react";
-import {projects} from '@/repository/work'
+import {Project, projects} from '@/repository/work'
 
 const Work = () => {
   
 
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [selectedProject, setSelectedProject] = useState<Project|null>(null);
   const [imageIndex, setImageIndex] = useState(0);
 
   const nextImage = () => {
+    if (selectedProject === null) return;
     setImageIndex((prev) =>
       prev === selectedProject.images.length - 1 ? 0 : prev + 1
     );
   };
 
   const prevImage = () => {
+    if (selectedProject === null) return;
     setImageIndex((prev) =>
       prev === 0 ? selectedProject.images.length - 1 : prev - 1
     );
   };
+
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedProject]);
 
   return (
     <section className="w-full my-32 flex flex-col gap-16">
@@ -105,10 +119,22 @@ const Work = () => {
 
       {/* Modal Gallery */}
       {selectedProject && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+          onClick={() => setSelectedProject(null)}
+        >
+          <div
+            className="relative flex items-center justify-center w-full h-screen"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div
+              className="h-full w-full absolute left-0 top-0"
+              onClick={() => setSelectedProject(null)}
+            />
 
-          <div className="relative flex items-center justify-center w-full ">
-
+            <div className="absolute left-1/2 top-4 z-300 text-text-primary">
+              {`${imageIndex+1} / ${selectedProject.images.length}`}
+            </div>
             {/* Image */}
             <Image
               src={selectedProject.images[imageIndex]}
@@ -116,66 +142,28 @@ const Work = () => {
               className="max-h-[80vh] w-auto rounded-lg object-contain"
             />
 
-            {/* Close */}
+            {/* Close Button */}
             <button
               onClick={() => setSelectedProject(null)}
-              className="
-              absolute -top-3 -left-20
-              bg-black/70
-              hover:bg-black
-              text-white
-              w-10 h-10
-              rounded-full
-              flex items-center justify-center
-              text-xl
-              transition
-              "
+              className="absolute cursor-pointer top-2 left-8 text-white w-14 h-14 rounded-full flex items-center justify-center text-xl transition z-200"
             >
               ✕
             </button>
 
-            {/* Prev */}
+            {/* Prev / Next */}
             <button
               onClick={prevImage}
-              className="
-              absolute left-6
-              top-1/2
-              -translate-y-1/2
-              bg-black/70
-              hover:bg-black
-              text-white
-              w-12 h-12
-              rounded-full
-              flex items-center justify-center
-              text-2xl
-              transition
-              "
+              className="absolute  max-h-[80vh] h-full cursor-pointer left-6 top-1/2 -translate-y-1/2  text-white w-12   flex items-center justify-center text-2xl transition"
             >
-              ‹
+              <span className="hover:bg-text-secondary-muted h-12 aspect-square flex items-center justify-center rounded-full"> ‹</span>
             </button>
-
-            {/* Next */}
             <button
               onClick={nextImage}
-              className="
-              absolute right-6
-              top-1/2
-              -translate-y-1/2
-              bg-black/70
-              hover:bg-black
-              text-white
-              w-12 h-12
-              rounded-full
-              flex items-center justify-center
-              text-2xl
-              transition
-              "
+              className="absolute max-h-[80vh] h-full right-6 top-1/2 -translate-y-1/2 cursor-pointer  text-white w-12 flex items-center justify-center text-2xl transition"
             >
-              ›
+              <span className="hover:bg-text-secondary-muted h-12 aspect-square flex items-center justify-center rounded-full"> ›</span>
             </button>
-
           </div>
-
         </div>
       )}
     </section>
