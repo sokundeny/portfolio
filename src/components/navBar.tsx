@@ -9,9 +9,10 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { name: "About Me", url: "/" },
-  { name: "My Tech Stack", url: "/" },
-  { name: "My Work", url: "/" },
+  { name: "About Me", url: "#aboutme" },
+  { name: "My Tech Stack", url: "#tech" },
+  { name: "My Work", url: "#work" },
+  { name: "Contact Me", url: "#contact" },
 ];
 
 const NavBar = () => {
@@ -91,7 +92,7 @@ const NavBar = () => {
         {/* Sliding menu */}
         <div
           ref={menuRef}
-          className={`absolute top-0 right-0 w-[70%] h-full bg-white/20 backdrop-blur-3xl shadow-lg flex flex-col items-center gap-6 py-6 transition-transform duration-300
+          className={`absolute top-0 right-0 w-[70%] h-full bg-white/20 backdrop-blur-3xl shadow-lg flex flex-col items-stretch py-6 transition-transform duration-300
             ${isOpen ? "translate-x-0" : "translate-x-full"}`}
         >
           {/* Close Button */}
@@ -108,7 +109,7 @@ const NavBar = () => {
               href={item.url}
               onClick={() => setIsOpen(false)}
             >
-              <h2 className="text-text-primary text-lg font-semibold tracking-wide hover:text-text-secondary transition-all duration-300 cursor-pointer">
+              <h2 className="text-center py-4 text-text-primary text-lg font-semibold tracking-wide hover:text-text-secondary transition-all duration-300 cursor-pointer">
                 {item.name}
               </h2>
             </Link>

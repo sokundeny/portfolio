@@ -3,6 +3,7 @@ import AboutMe from "./_components/aboutMe";
 import TechStack from "./_components/techStack";
 import Work from "./_components/work";
 import Footer from '@/components/footer'
+import ContactMe from "./_components/contactMe";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <AboutMe/>
         <TechStack/>
         <Work />
+        <ContactMe/>
         <Footer/>
       </div>
     </div>

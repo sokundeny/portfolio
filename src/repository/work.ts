@@ -1,11 +1,4 @@
-import t_1 from '@/assets/work/T-watch/t_1.png';
-import t_2 from '@/assets/work/T-watch/t_2.png';
-import t_3 from '@/assets/work/T-watch/t_3.png';
-import t_4 from '@/assets/work/T-watch/t_4.png';
-import t_5 from '@/assets/work/T-watch/t_5.png';
-import t_6 from '@/assets/work/T-watch/t_6.png';
-import t_7 from '@/assets/work/T-watch/t_7.png';
-import { StaticImageData } from 'next/image';
+
 
 // Type for a single repository
 export type ProjectRepo = {
@@ -17,8 +10,8 @@ export type ProjectRepo = {
 export type Project = {
   title: string;
   description: string;
-  images: StaticImageData[];  
-  thumnail: StaticImageData;  
+  images: string[];  
+  thumnail: string;  
   repos: ProjectRepo[];
   link?: string; 
 };
@@ -29,12 +22,40 @@ export const projects: Project[] = [
     title: "T- watch",
     description:
       "An e-commerce frontend web application built with React js. User can browse and buy watch",
-    images: [t_1, t_2, t_3, t_4, t_5, t_6, t_7],
-    thumnail: t_1,
+    images: [
+      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612319/t_1_pkvngs.png", 
+      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612319/t_2_tmvgzx.png", 
+      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612319/t_3_hcow5r.png", 
+      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612319/t_4_irqnki.png", 
+      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612319/t_5_ocredz.png", 
+      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612320/t_6_dnj4rp.png", 
+      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612320/t_7_xut0hc.png"],
+    thumnail: "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612319/t_1_pkvngs.png",
     repos: [
       {
         name: "Repository",
         link: "https://github.com/sokundeny/T_WATCH",
+      },
+    ],
+    link: "https://facebook.com",
+  },
+  {
+    title: "Chat Application",
+    description:
+      "An Application using Java with socket which user can send text or image in real time",
+    images: [
+      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612319/t_1_pkvngs.png", 
+      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612319/t_2_tmvgzx.png", 
+      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612319/t_3_hcow5r.png", 
+      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612319/t_4_irqnki.png", 
+      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612319/t_5_ocredz.png", 
+      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612320/t_6_dnj4rp.png", 
+      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612320/t_7_xut0hc.png"],
+    thumnail: "https://res.cloudinary.com/dz5le70y6/image/upload/v1773612319/t_1_pkvngs.png",
+    repos: [
+      {
+        name: "Repository",
+        link: "https://github.com/JamJam126/Chat-Application",
       },
     ],
     link: "https://facebook.com",

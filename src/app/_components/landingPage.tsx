@@ -17,7 +17,7 @@ const LandingPage = () => {
   });
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center gap-4">
+    <div id="landing" className="w-full h-screen flex flex-col items-center justify-center gap-4">
       <p className="text-xl md:text-3xl text-text-secondary">Hello! I'm</p>
       <h1 className="text-4xl md:text-7xl text-text-primary font-bold">SOKUN DENY</h1>
       <p className="text-xl md:text-3xl text-text-secondary flex items-center">

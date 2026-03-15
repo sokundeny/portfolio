@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const AboutMe = () => {
   return (
-    <div className="flex items-start justify-center gap-14 flex-col w-full my-32">
+    <div id="aboutme" className="flex items-start justify-center gap-14 flex-col w-full my-32">
       <div className="text-4xl md:text-6xl font-medium text-text-secondary">
         About Me
       </div>
