@@ -46,10 +46,10 @@ const TechStack = () => {
 
 
   return (
-    <section className="w-full my-63 flex flex-col gap-24">
+    <section className="w-full mb-32 flex flex-col gap-24">
 
       {/* Title */}
-      <h2 className="text-6xl font-medium text-text-secondary ">
+      <h2 className="text-4xl md:text-6xl font-medium text-text-secondary ">
         My Tech Stack
       </h2>
 

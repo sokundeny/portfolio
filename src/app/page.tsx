@@ -7,7 +7,7 @@ import Footer from '@/components/footer'
 export default function Home() {
   return (
     <div className="flex justify-center w-full">
-      <div className="w-full max-w-300">
+      <div className="w-full max-w-300 xl:px-0 px-4">
         <LadingPage/>
         <AboutMe/>
         <TechStack/>

@@ -38,10 +38,10 @@ const Work = () => {
   }, [selectedProject]);
 
   return (
-    <section className="w-full my-32 flex flex-col gap-16">
+    <section className="w-full mb-32 flex flex-col gap-16">
 
       {/* Title */}
-      <h2 className="text-6xl font-medium text-text-secondary">
+      <h2 className="text-4xl md:text-6xl font-medium text-text-secondary">
         My Works
       </h2>
 

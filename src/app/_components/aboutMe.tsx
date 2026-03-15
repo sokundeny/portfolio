@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 
 const AboutMe = () => {
   return (
-    <div className="flex items-start justify-center gap-14 flex-col w-full my-63">
-      <div className="text-6xl font-medium text-text-secondary">
+    <div className="flex items-start justify-center gap-14 flex-col w-full my-32">
+      <div className="text-4xl md:text-6xl font-medium text-text-secondary">
         About Me
       </div>
 
-      <div className="w-full flex gap-24">
-        <div className="w-100 shrink-0">
+      <div className="w-full flex flex-col lg:flex-row gap-24">
+        <div className="w-full max-w-100 lg:shrink-0">
           <motion.div 
             className="h-120 w-full"
             initial={{ opacity: 0, y: 50 }}
@@ -29,7 +29,7 @@ const AboutMe = () => {
           </motion.div>
         </div>
 
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between h-120">
           <h1 className="text-4xl text-white ">Hi! I am Sokun Deny</h1>
 
           <p className="text-xl text-text-secondary-muted leading-8 text-balance">
