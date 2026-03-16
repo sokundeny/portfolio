@@ -44,7 +44,9 @@ const NavBar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-20 backdrop-blur-md bg-white/0.5">
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 lg:px-8">
-        <h1 className="text-primary text-2xl font-bold">SOKUN DENY</h1>
+        <Link href={'#landing'}>
+          <h1 className="text-primary text-2xl font-bold">SOKUN DENY</h1>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-12">

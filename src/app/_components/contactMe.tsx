@@ -11,7 +11,8 @@ interface FormState {
 const ContactMe = () => {
   const [form, setForm] = useState<FormState>({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<{message:string}|null>(null);
+  const [error, setError] = useState<{ message: string } | null>(null);
+  const [success, setSuccess] = useState<{ message: string } | null>(null);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -30,7 +31,12 @@ const ContactMe = () => {
 
       if (!res.ok) throw new Error("Failed to send message");
 
-      alert("Message sent successfully!");
+      setSuccess({ message: "Message Sent" });
+
+      setTimeout(() => {
+        setSuccess(null);
+      }, 3000);
+
       setForm({ name: "", email: "", message: "" });
     } catch (err: any) {
       setError(err)
@@ -43,7 +49,7 @@ const ContactMe = () => {
     <div id="contact" className="flex flex-col w-full my-32">
       {/* Title */}
       <h2 className="text-4xl md:text-6xl font-medium text-text-secondary mb-12">
-        Get In Touch
+        Let's Get In Touch
       </h2>
 
       {/* Form */}
@@ -88,7 +94,7 @@ const ContactMe = () => {
           disabled={loading}
           className="bg-primary text-black font-semibold px-6 py-3 rounded-md hover:brightness-110 transition w-full md:w-auto"
         >
-          {loading ? "Sending..." : "Send Message"}
+          {success?`${success.message}`:(loading ? "Sending..." : "Send Message")}
         </button>
         <div className="text-red-400">{error&&"*Something Went Wrong"}</div>
       </form>
