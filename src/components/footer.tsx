@@ -24,7 +24,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=sokundeny@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=sokundeny18@gmail.com"
             rel="noopener noreferrer"
             className="hover:text-primary transition"
             target="_blank"
