@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Mail, Send } from "lucide-react";
+import { Github, Mail, Send ,Linkedin} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -38,6 +38,14 @@ const Footer = () => {
             className="hover:text-primary transition"
           >
             <Send size={24} />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/deny-sokun-a64170363/"
+            target="_blank"
+            className="hover:text-primary transition"
+          >
+            <Linkedin size={24} />
           </a>
 
         </div>

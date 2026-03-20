@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import profile from "@/assets/profile.png"
-import { Facebook, Instagram, Send ,Github} from "lucide-react";
+import { Facebook, Linkedin, Send ,Github} from "lucide-react";
 import { motion } from "framer-motion";
 
 const AboutMe = () => {
@@ -50,16 +50,14 @@ const AboutMe = () => {
             <a href="https://www.facebook.com/deny.sokun" target="_blank">
               <Facebook size={42} className="hover:text-primary transition" />
             </a>
-
-            <a href="https://www.instagram.com/sokun_deny/" target="_blank">
-              <Instagram size={42} className="hover:text-primary transition" />
+            <a href="https://github.com/sokundeny" target="_blank">
+              <Github size={42} className="hover:text-primary transition" />
             </a>
-
             <a href="https://t.me/sokundeny" target="_blank">
               <Send size={42} className="hover:text-primary transition" />
             </a>
-            <a href="https://github.com/sokundeny" target="_blank">
-              <Github size={42} className="hover:text-primary transition" />
+            <a href="https://www.linkedin.com/in/deny-sokun-a64170363/" target="_blank">
+              <Linkedin size={42} className="hover:text-primary transition" />
             </a>
           </div>
 
