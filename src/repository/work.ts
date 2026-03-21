@@ -124,7 +124,7 @@ export const projects: Project[] = [
       "A Mobile Application using Flutter user can find a guidence to get  emergency assistance",
     images: [
       "https://res.cloudinary.com/dz5le70y6/image/upload/v1773680911/Screenshot_2026-03-17_000211_dyfinz.png",
-      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773680911/Screenshot_2026-03-17_000211_dyfinz.png",
+      "https://res.cloudinary.com/dz5le70y6/image/upload/v1773681013/Screenshot_2026-03-17_000226_rmctwe.png",
       "https://res.cloudinary.com/dz5le70y6/image/upload/v1773681013/Screenshot_2026-03-17_000237_un5zun.png",
       "https://res.cloudinary.com/dz5le70y6/image/upload/v1773681013/Screenshot_2026-03-17_000302_rodn9a.png",
       "https://res.cloudinary.com/dz5le70y6/image/upload/v1773681012/Screenshot_2026-03-17_000247_dxghdp.png",],

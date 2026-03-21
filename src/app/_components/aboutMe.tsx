@@ -12,7 +12,7 @@ const AboutMe = () => {
         About Me
       </div>
 
-      <div className="w-full flex flex-col lg:flex-row gap-24">
+      <div className="w-full flex flex-col lg:flex-row gap-36">
         <div className="w-full max-w-100 lg:shrink-0">
           <motion.div 
             className="h-120 w-full"
@@ -29,7 +29,7 @@ const AboutMe = () => {
           </motion.div>
         </div>
 
-        <div className="flex flex-col justify-between h-120">
+        <div className="flex flex-col justify-between md:h-120 gap-4 md:gap-0">
           <h1 className="text-4xl text-white ">Hi! I am Sokun Deny</h1>
 
           <p className="text-xl text-text-secondary-muted leading-8 text-balance">
@@ -48,16 +48,16 @@ const AboutMe = () => {
           {/* Social Icons */}
           <div className="flex gap-6 text-text-secondary">
             <a href="https://www.facebook.com/deny.sokun" target="_blank">
-              <Facebook size={42} className="hover:text-primary transition" />
+              <Facebook size={36} className="hover:text-primary transition" />
             </a>
             <a href="https://github.com/sokundeny" target="_blank">
-              <Github size={42} className="hover:text-primary transition" />
+              <Github size={36} className="hover:text-primary transition" />
             </a>
             <a href="https://t.me/sokundeny" target="_blank">
-              <Send size={42} className="hover:text-primary transition" />
+              <Send size={36} className="hover:text-primary transition" />
             </a>
             <a href="https://www.linkedin.com/in/deny-sokun-a64170363/" target="_blank">
-              <Linkedin size={42} className="hover:text-primary transition" />
+              <Linkedin size={36} className="hover:text-primary transition" />
             </a>
           </div>
 
