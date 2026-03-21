@@ -46,14 +46,14 @@ const ContactMe = () => {
   };
 
   return (
-    <div id="contact" className="flex flex-col w-full my-32">
+    <div id="contact" className="flex md:flex-row flex-col w-full my-32 gap-8">
       {/* Title */}
-      <h2 className="text-4xl md:text-6xl font-medium text-text-secondary mb-12">
+      <h2 className="flex-3 text-4xl md:text-6xl font-medium text-text-secondary mb-12 content-end md:self-start">
         Let's Get In Touch
       </h2>
 
       {/* Form */}
-      <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full max-w-7xl">
+      <form onSubmit={handleSubmit} className="flex-5 flex flex-col gap-6 w-full max-w-7xl">
         {/* First row: Name & Email */}
         <div className="flex flex-col md:flex-row gap-4">
           <input
